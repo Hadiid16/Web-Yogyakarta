@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #778899;
+}
+
+
+/*======== Menu Navigasi =======*/
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(2rem + 1rem);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    transition: 0.5s ease;
+    transition-property: height, background;
+}
+
+header .logo{
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 5px 25px rgb(2, 2, 2, 0.7);
+}
+
+header .icons {
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+header .navigation{
+    position: relative;
+
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 10px;
+    text-shadow: 0 5px 25px rgb(2, 2, 2, 0.5);
+    margin-left: 30px;
+    transition: .5s;
+}
+
+header .navigation .navigation-items a:hover,
+header .navigation .navigation-items a.active {
+    color: #000;
+}
+
+header .navigation .navigation-items a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 20px;
+    z-index: -1;
+    transform: scale(0);
+    transition: .5s;
+}
+
+header .navigation .navigation-items a:hover span,
+header .navigation .navigation-items a.active span {
+    transform: scale(1);
+    opacity: 1;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+
+/*======== Banner =======*/
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #000;
+}
+
+.banner img {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-color: #e8e8e8;
+    opacity: .3;
+}
+
+.banner video{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+}
+
+.banner .content{
+    text-align: center;
+    z-index: 888;
+    color: #fff;
+}
+
+.banner .content h1{
+    font-size: 3.7em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 20px;
+}
+
+.banner .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.banner .content h3{
+    margin-bottom: 65px;
+    letter-spacing: 10px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.section{
+    padding: 50px 100px;
+}
+
+.banner::before{
+    z-index: 888;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, #2e2e41);
+}
+
+
+/*======== Bagian Konten 1 =======*/
+.tab-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #2e2e41;
+}
+
+.tab{
+    max-width: 1100px;
+    padding: 30px 50px;
+}
+
+.tab .row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    gap: 60px;
+}
+
+.tab .img-card{
+    position: relative;
+    width: 450px;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.1);
+}
+
+.tab .img-card img{
+    width: 100%;
+}
+
+.right-column{
+    max-width: 800px;
+}
+
+.info .city, .info .description p{
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.info .city{
+    font-size: 2em;
+}
+
+.info::before{
+    z-index: 888;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, #e8e8e8);
+}
+
+
+/*======== Bagian Konten 2 =======*/
+.campus{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-image: linear-gradient(rgba(220,220,220,0.75),rgba(220,220,220,0.75)),url(background.2.jpg) ;
+}
+
+.country{
+    color: #000;
+    font-size: 5em;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 5px 25px rgb(2, 2, 2, 0.50);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .card:hover {
+    height: 400px;
+    cursor: pointer;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 220px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -50px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 170px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container .card .content p {
+    color: #333;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+}
+
+
+.container .card {
+    width: 230px;
+    border-radius: 15px;
+}
+
+.container .card .img-box {
+    width: 185px;
+    border-radius: 10px;
+}
+
+.container .card .content p {
+    font-size: 0.8rem;
+}
+
+.container .card .content a {
+    font-size: 0.9rem;
+}
+
+section {
+    padding: 100px 50px;
+}
+
+
+/*======== Comment Section =======*/
+.comment-box {
+    width: 50%;
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-left: 25%;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
+    background-color: #ddd;
+}
+
+.commen {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+    padding-top: 50px;
+    text-align: center;
+    text-shadow: 0 5px 25px rgb(2, 2, 2, 0.50);
+}
+
+.comment-box p {
+    text-align: left;
+    font-size: 28px;
+    color: #777;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    color: #777;
+}
+
+.comment-form button {
+    margin: 10px 0;
+    border: none;
+    background-color: #d0d0d0;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    color: #444;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #444;
+}
+
+@media (max-width:900px) {
+    .comment-box {
+        width: 80%;
+        margin: 5%;
+    }
+}
+
+/*======== Footer =======*/
+.footer {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.footer .social {
+    display: flex;
+    padding-bottom: 25px;
+    color: #4b4c4d;
+    list-style: none;
+    justify-content: center;
+} 
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+} 
+
+.footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover {
+    opacity: 1;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    border-radius: 5px;
+    background-color: #FF3E7F;
+    padding: 6px;
+    display: inline-flex;
+    color: #fff;
+    font-size: 1.25rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    z-index: 10;
+    transition: bottom .4s, transform .4s;
+  }
+  
+  .scrollup:hover{
+    transform: translateY(-.25rem);
+  }
+  
+/* Show Scroll Up */
+  .show-scroll{
+    bottom: 3rem;
+  
+}
+
+/*======== Resposive Web =======*/
+@media only screen and (min-width: 340px){
+
+    header {
+        padding: 25px 25px;
+    }
+
+    header .logo{
+        font-size: 1em;
+    }
+
+    header .icons {
+        display: block;
+        font-size: 2em;
+        padding-top: 6px;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    header .navigation-items {
+        position: fixed;
+        display: none;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .8);
+        backdrop-filter: blur(50px);
+    }
+
+    #check:checked~.navigation-items {
+        display: block;
+        height: 19rem;
+    }
+
+    header .navigation .navigation-items a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.3rem 0;
+        text-align: center;
+    }
+
+    header .navigation .navigation-items a span {
+        border-radius: 0;
+    }
+
+    .banner{
+        min-height: 80vh;
+    }
+
+    .banner .content h1{
+        font-size: 1.7em;
+    }
+
+    .banner .content h3{
+        letter-spacing: 5px;
+        font-size: .7em;
+    }
+
+    .banner .content{
+        width: 600px;
+    }
+
+    .tab .img-card{
+        width: 240px;
+    }
+
+    .container {
+        padding: 100px 0;
+    }
+
+    .country{
+        font-size: 3.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .comment-box {
+        width: 90%;
+    }
+
+    .commen {
+        font-size: 2.2em;
+        font-weight: 700;
+        padding-top: 50px;
+    }
+
+    .tab .row{
+        flex-wrap: wrap;
+    }
+
+    .scrollup{
+        right: 1rem;
+        
+    }
+
+}
+
+@media only screen and (min-width: 576px){
+
+    header {
+        padding: 25px 25px;
+    }
+
+    header .logo{
+        font-size: 1.4em;
+    }
+
+    header .icons {
+        display: block;
+        font-size: 2em;
+        padding-top: 5px;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    header .navigation-items {
+        position: fixed;
+        display: none;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .8);
+        backdrop-filter: blur(50px);
+    }
+
+    #check:checked~.navigation-items {
+        display: block;
+        height: 19rem;
+    }
+
+    header .navigation .navigation-items a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.3rem 0;
+        text-align: center;
+    }
+
+    header .navigation .navigation-items a span {
+        border-radius: 0;
+    }
+
+    .banner{
+        min-height: 100vh;
+    }
+
+    .banner .content h1{
+        font-size: 3.2em;
+        font-weight: 900;
+    }
+
+    .banner .content h3{
+        letter-spacing: 7px;
+        font-size: 1.2em;
+    }
+
+    .banner .content{
+        width: 600px;
+    }
+
+    .tab .img-card{
+        width: 450px;
+    }
+
+    .country{
+        font-size: 3.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .comment-box {
+        width: 90%;
+    }
+
+    .commen {
+        font-size: 2.2em;
+        font-weight: 700;
+        padding-top: 50px;
+    }
+
+    .tab .row{
+        flex-wrap: wrap;
+    }
+
+    .scrollup{
+        right: 2rem;
+        
+    }
+
+}
+
+@media only screen and (min-width: 1023px){
+
+    header{
+        padding: 5px 50px;
+    }
+
+    header .logo{
+        font-size: 1.4em;
+    }
+
+    header .icons {
+        display: none;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: none;
+    }
+
+    header .navigation-items{
+        position: relative;
+        display: inline;
+        top: 0;
+        left: 0;
+        height: 25px;
+        background: none;
+        backdrop-filter: none;
+    }
+
+    header .navigation .navigation-items a{
+        display: inline;
+        font-size: .9rem;
+        margin: 0 0.5rem;
+    }
+
+    header .navigation .navigation-items a span {
+        border-radius: 20px;
+    }
+
+    .banner{
+        min-height: 100vh;
+    }
+
+    .banner .content h3{
+        letter-spacing: 10px;
+        font-size: 1.2em;
+    }
+
+    .tab .img-card{
+        width: 450px;
+    }
+
+    .country{
+        font-size: 5em;
+    }
+
+    h3 {
+        font-size: 2.2em;
+        font-weight: 500;
+    }
+
+    .banner .content{
+        width: 70%;
+        margin-top: 50px;
+    }
+
+    .comment-box {
+        width: 50%;
+    }
+
+    .commen {
+        font-size: 3.7em;
+        font-weight: 700;
+        padding-top: 50px;
+    }
+
+    .tab .row{
+        flex-wrap: nowrap;
+    }
+
+    .scrollup{
+        right: 3rem;
+        
+    }
+}
